@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Employee {
+  id             String    @id @default(uuid())
+  employee_id    String    @unique
+  name           String
+  email          String
+  cnic           String
+  designation    String
+  joining_date   DateTime
+  current_salary Float
+  status         String    @default("Active") // "Active" | "Inactive"
+  created_at     DateTime  @default(now())
+
+  payslips       Payslip[]
+
+  @@map("employees")
+}
+
+model Payslip {
+  id          String    @id @default(uuid())
+  employee_id String
+  employee    Employee  @relation(fields: [employee_id], references: [id], onDelete: Cascade)
+
+  month       String // e.g. "July"
+  year        Int    // e.g. 2026
+
+  paid_salary Float // locked-in historical salary at time of payslip generation
+  pdf_url     String?
+  email_sent  Boolean   @default(false)
+  sent_at     DateTime?
+
+  @@unique([employee_id, month, year], name: "employee_id_month_year")
+  @@map("payslips")
+}

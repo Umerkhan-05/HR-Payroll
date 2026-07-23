@@ -23,89 +23,75 @@ const employees: SeedEmployee[] = [
   {
     employee_id: "NS-EMP-001",
     name: "Mirza Mahad Baig",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
+    email: "privmirzaculous@gmail.com",
+    cnic: "42201-1739080-5",
     designation: "Customer Support Representative",
-    joining_date: "2026-05-20",
+    joining_date: "2026-06-01",
     current_salary: 50000,
   },
   {
     employee_id: "NS-EMP-002",
     name: "Syed Muhammad Fawwad",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
+    email: "ghausfawwad@gmail.com",
+    cnic: "42101-3482285-7",
     designation: "Customer Support Representative",
-    joining_date: "TODO", // e.g. "2026-06-01"
+    joining_date: "2026-06-01",
     current_salary: 60000,
   },
   {
     employee_id: "NS-EMP-003",
     name: "Muhammad Hadees",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
+    email: "mhadees93@gmail.com",
+    cnic: "42201-5149702-1",
     designation: "Customer Support Representative",
-    joining_date: "TODO",
+    joining_date: "2026-06-01",
     current_salary: 70000,
-  },
-  {
-    employee_id: "NS-EMP-004",
-    name: "Muhammad Kaif",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
-    designation: "Customer Support Representative",
-    joining_date: "TODO",
-    current_salary: 60000,
   },
   {
     employee_id: "NS-EMP-005",
     name: "Asad Ali",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
+    email: "asadali0300216@gmail.com",
+    cnic: "42000-1597143-3",
     designation: "Customer Support Representative",
-    joining_date: "TODO",
+    joining_date: "2026-06-01",
     current_salary: 55000,
   },
   {
     employee_id: "NS-EMP-006",
     name: "Osama",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
+    email: "m.usamakzam1@gmail.com",
+    cnic: "42301-8896120-9",
     designation: "Customer Support Representative",
-    joining_date: "TODO",
+    joining_date: "2026-06-01",
     current_salary: 60000,
   },
   {
     employee_id: "NS-EMP-007",
     name: "Shaheeer",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
+    email: "sheero.ghaus@gmail.com",
+    cnic: "42101-3338653-9",
     designation: "Customer Support Representative",
-    joining_date: "TODO",
-    current_salary: 50000,
-  },
-  {
-    employee_id: "NS-EMP-008",
-    name: "Shahvaiz",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
-    designation: "Customer Support Representative",
-    joining_date: "TODO",
+    joining_date: "2026-06-01",
     current_salary: 50000,
   },
   {
     employee_id: "NS-EMP-009",
     name: "Ali Ahmed Khan",
-    email: "TODO@nevzora.com",
-    cnic: "TODO-0000000-0",
+    email: "alistoneahmed786@gmail.com",
+    cnic: "42101-9193789-7",
     designation: "Customer Support Representative",
-    joining_date: "TODO",
+    joining_date: "2026-06-01",
     current_salary: 50000,
   },
 ];
 
 async function main() {
   for (const emp of employees) {
-    if (emp.email.startsWith("TODO") || emp.joining_date === "TODO") {
+    if (
+      emp.email.startsWith("TODO") ||
+      emp.cnic.startsWith("TODO") ||
+      emp.joining_date === "TODO"
+    ) {
       console.warn(
         `⚠️  Skipped ${emp.name} (${emp.employee_id}) — placeholder fields still need to be filled in.`
       );
